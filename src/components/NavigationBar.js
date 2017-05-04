@@ -1,30 +1,32 @@
 /**
  * Created by Will on 2017/5/2.
  */
-import React,{Component} from 'react'
+import React,{PropTypes} from 'react'
 import {BrowserRouter as Router,Link} from 'react-router-dom'
-class NavigationBar extends Component{
-    constructor(){
-        super()
-    }
-    render(){
-        return (<div>
-            <ul>
-                <li>
-                    <a href="/" > 首页</a>
-                </li>
-                <li>
-                    <a href="/topics" >话题</a>
-                </li>
-                <li>
-                    <a href="/notifications" >通知</a>
-                </li>
-                <li>
-                    <a href ="">学习</a>
-                </li>
-            </ul>
-        </div>)
-    }
+
+export const NavigationBar = ()=>{
+    return (
+        <Router>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/" > 首页</Link>
+                    </li>
+                    <li>
+                        <Link to="/topics" >话题</Link>
+                    </li>
+                    <li>
+                        <Link to="/notifications" >通知</Link>
+                    </li>
+                    <li>
+                        <Link to ="">学习</Link>
+                    </li>
+                </ul>
+            </div>
+        </Router>
+    )
 }
 
-export default NavigationBar
+NavigationBar.propTypes={
+    
+}
